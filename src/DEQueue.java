@@ -1,3 +1,6 @@
+// In Double Ended Queue insertion and deletion can be performed at both end.
+
+
 public class DEQueue {
   int arr[];
   int rear;
@@ -31,6 +34,8 @@ public class DEQueue {
     }
     return response;
   }
+
+  // Method to check the queue is full from front
   public boolean isfullfront()
   {
     if(front ==0)
@@ -42,7 +47,7 @@ public class DEQueue {
       return false;
     }
   }
-
+// Insertion of new element at rear end
   public void insertrear(int data)
   {
     if(isfullrear())
@@ -59,7 +64,8 @@ public class DEQueue {
       }
     }
   }
-  // insert front
+  // insertion of new element at front end
+
   public void insertfront(int data)
   {
     if(isfullfront())
@@ -80,6 +86,7 @@ public class DEQueue {
       }
     }
   }
+  // deletion of new element at rearend
   public void removerear()
   {
     if(isempty())
@@ -101,6 +108,8 @@ public class DEQueue {
     }
   }
 
+  // deletion of new record at frontend only
+
   public void removefront() {
     if (isempty()) {
       System.out.println("underflow");
@@ -114,14 +123,18 @@ public class DEQueue {
         System.out.println(arr[front]);
         front++;
       }
-    }}
-  public void display()
-  {
-    for(int i =front; i<=rear;i++){
-      System.out.println(arr[i]);
     }
   }
 
+  // display all the data from the queue
+
+  public void display()
+  {
+    for(int i =front; i<=rear;i++)
+    {
+      System.out.println(arr[i]);
+    }
+  }
 
   public static void main(String[] args) {
     DEQueue obj = new DEQueue(5);
